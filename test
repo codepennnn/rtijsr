@@ -1,1 +1,1 @@
-test
+delete * from TableName
