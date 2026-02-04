@@ -1,1 +1,15 @@
 delete * from TableName
+
+
+BEGIN TRANSACTION;
+
+DELETE FROM TableName
+WHERE some_column = 'some_value';
+
+-- verify the rows that would be removed
+SELECT * FROM TableName WHERE some_column = 'some_value';
+
+-- when satisfied:
+COMMIT;
+-- or to cancel:
+-- ROLLBACK;
